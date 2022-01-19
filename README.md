@@ -1,43 +1,11 @@
-# Developing Django on Repl.it
+# Python Django Gas Agency Project
 
-- Fork this template to get started
-- Simply hit run to start the server
-- The server will autoreload as needed. You don't need to restart the server manually.
+## Our Aim
+Our Aim is to make the Gas Agency system more efficient by providing it to end user for self service. You can use this service without any restriction (Terms and Conditions Apply) if you have internet connection. You can take a new connection. book a gas, check the deliveries etc. Now no more waiting in line if you are also an introvert like me ;).
 
-## Add your first view
+## What we Used ?
+We have used the powerful framework Django which makes it easier for developers to use HTML, CSS and Python simultaneously for frontend and backend. But why only Django? Its because using Django one can easily make a local server. We also hosted our server on replit. No matter wherever you are you can use it. Our server works fast as sonic the hedgehog with the response time of 30ms.
 
-1. Create a file under `mysite` named `views.py` with the following contents:
-
-```
-from django.http import HttpResponse
-
-
-def index(request):
-    return HttpResponse("Hello, world.")
-```
-
-2. Add a url pattern under `mysite/urls.py`. It should look like this:
-
-```
-from django.contrib import admin
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-]
-```
-
-## Shell
-
-Django utilizes the shell for managing your site. For this click on the `?` in the lower-right corner and click "Workspace shortcuts" from there you can open a new shell pane. 
-
-## Database
-
-By default this template utilizes the sqlite database engine. While this is fine for development it won't work with external users of your app as we don't persist changes to files when they happen outside the development environment. 
-
-We suggest bringing a database using an outside service. 
-
-See Django documentation on how to setup a database: https://docs.djangoproject.com/en/3.0/intro/tutorial02/
+## Thank You
+This is a project made by Sanchit Mishra, Priyanshu Jain, Priyanshu Yadav and Prakhar Paliwal under the guidance of respected Sir Rahul Johri (HOD Computer Science, Assisi Convent School Etah). We are thankful to the team members for a great contribution in designing this project with such a powerful determination and hardwork. We also thank to the user for using , testing and helping us improve it.
 
