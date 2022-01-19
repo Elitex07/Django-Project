@@ -1,0 +1,50 @@
+{% extends 'home.html' %}
+{% block pagehead%}{% endblock pagehead%}
+{% block pay%}
+<h1 style='margin-left: 20%;margin-right:20%;padding: 10p'>Payment</h1>
+<br>
+<div class='container'>
+  <form action='pay' method='GET'>
+    {% csrf_token %}
+    <label for="cname">Name on Card</label>
+      <input type="text" id="cname" name="cardname">
+    <label for="ccnum">Credit card number</label>
+      <input type="password" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+    <label for="expmonth">Exp Month</label>
+      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+    <label for="expyear">Exp Year</label>
+      <input type="text" id="expyear" name="expyear" placeholder="2018">
+    <label for="cvv">CVV</label>
+      <input type="password" id="cvv" name="cvv">
+    <input type="button" name='submit' value='Pay' class="registerbtn">
+  </form>
+</div>
+<style>
+.container2{
+  margin-left: 20%;
+  margin-right:20%;
+  padding: 10px;
+  background-color: black;
+  }
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: white;
+  }
+input[type=button]{
+    background-color: #115ed9;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  
+}
+
+  
+{% endblock %}

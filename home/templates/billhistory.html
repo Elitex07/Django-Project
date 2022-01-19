@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+{% block pagehead%}{% endblock pagehead%}
+{% block history%}
+<h1>Billing History</h1>
+<br>
+<center>
+<table border=1 bgcolor=#2b2626 solid>
+  <th>Billing Number</th><th>Gas Cylinder Type</th><th>Delivered By</th><th>Delivery Date</th><th>Amount</th>
+  {% for hist in data %}
+  <tr>
+    <td>{{hist.billnum}}</td>
+    <td>{{hist.gctype}}</td>
+    <td>{{hist.delivboy}}</td>
+    <td>{{hist.expctdate}}</td>
+    <td>{{hist.amount}}</td>
+  </tr>
+  {% endfor %}
+  
+</table>
+</center>
+<br><br>
+<style>
+table,td,th {
+  padding: 15px;
+  border: 1px solid black;
+}
+</style>
+
+  
+{% endblock %}

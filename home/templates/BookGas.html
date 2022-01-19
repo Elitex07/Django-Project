@@ -1,0 +1,43 @@
+{% extends 'home.html' %}
+{% block pagehead%}{% endblock pagehead%}
+{% block BookGas%}
+<div class='container2'>
+<h1>Book Gas</h1>
+<center>
+<table border=0.5 bgcolor=black>
+  <tr><td>Account Name</td><td>{{name}}</td></tr>
+  <tr><td>Address</td><td>{{address}}</td></tr>
+  <tr><td>Billing Date</td><td>{{date}}</td></tr>
+  <tr><td>Phone No</td><td>{{phoneno}}</td></tr>
+</table>
+<hr>
+<font size="6" color=red>{{alert}}</font>
+</center>
+<form method='POST'>
+{% csrf_token%}
+  <label for="cylinder">Choose a cylinder:</label>
+  <select name="cylinder" id="cylinder">
+    <option value="7.8kg">7.8 kg small</option>
+    <option value="10.3kg">10.3 kg domestic</option>
+    <option value="14.2kg">14.2 kg non-domestic</option>
+  </select>
+  <br><br>
+Do you want to book a cylinder?
+<button value="book" name="book">Book</button>
+<br>
+</div>
+</form>
+<style>
+  .container2{
+  margin-left: 20%;
+  margin-right:20%;
+  padding: 10px;
+  background-color: black;
+  }
+  table,td,th {
+    padding: 2px;
+    border-collapse: collapse;
+  border: 1px solid white;
+}
+</style> 
+{% endblock %}

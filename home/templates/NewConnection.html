@@ -1,0 +1,39 @@
+{% extends 'home.html' %}
+{% block pagehead%}{% endblock pagehead%}
+{% block NewConnection%}
+<h1>New Connection</h1>
+<form method="POST",action='newc'>
+    {% csrf_token%}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value = {{uname}} disabled><br>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" value = {{fname}} required><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" value = {{lname}} required><br>
+    <label for="phoneno">Phone number:</label>
+    <input type="text" id="phoneno" name="phoneno" required><br>
+    <label for="email">Email ID:</label>
+    <input type="text" id="email" name="email" value = {{email}} required><br> 
+    Gender:
+    <input type="radio" id="genderm" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="genderf" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <label for="aadhaar">Aadhaar Number:</label>
+    <input type="text" id="aadhaar" name="aadhaar" required><br>
+    <label for="address">Address: (for delivery)</label>
+    <input type="text" id="address" name="address" required><br>
+    <label for="zip">Zip:</label>
+    <input type="text" id="zip" name="zip" required><br>
+    Preffered Payment Option:
+    <input type="radio" id="payoption" name="payoption" value="cod" checked>
+    <label for="cod">Cash On Delivery</label>
+    <input type="radio" id="payoption" name="payoption" value="upi" disabled>
+    <label for="upi">Paytm/UPI</label><br>
+        <font color=red>UPI unavailable.</font>
+        <br>
+      <br>
+    
+    <input type="submit" value="Submit"class='registerbtn'>
+{% endblock %}

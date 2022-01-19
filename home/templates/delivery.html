@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+{% block pagehead%}{% endblock pagehead%}
+{% block delivery %}
+<h1>Your Gas Delivery</h1>
+<br>
+<center>
+<table border=0.5 bgcolor=#2b2626>
+  {% for data in query %}
+  <tr><td>Billing Number</td><td>{{data.id}}</td></tr>
+  <tr><td>Gas Cylinder Type</td><td>{{data.gctype}}</td></tr>
+  <tr><td>Account Name</td><td>{{data.accname}}</td></tr>
+  <tr><td>Billing Date</td><td>{{data.billdate}}</td></tr>
+  <tr><td>Status</td><td>{{data.status}}</td></tr>
+  <tr><td>Delivery Boy</td><td>{{data.delivboy}}</td></tr>
+  <tr><td>Expected Delivery Date</td><td>{{data.expctdate}}</td></tr>
+  <tr><td>Amount</td><td>{{data.amount}}</td></tr>
+  <tr><td>Payment Status</td><td>{{data.payment}}</td></tr>
+  <tr><td>______________</td><td>______________</td></tr>
+  {% endfor %}
+</table>
+</center>
+<br><br>
+<style>
+td {
+  padding: 15px;
+}
+</style>
+  
+{% endblock %}

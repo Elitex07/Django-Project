@@ -1,0 +1,31 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block title %}EZ Gas{% endblock title %}
+{% block body%}
+<div style="padding:5px 100px;background-color: #171717;">
+  
+  <br><br>
+  {% block pagehead%}
+  <h1><center>Welcome to EZ gas, {{fname}}</center></h1>
+  {% endblock pagehead%}
+  <center>
+    <a href="new_connection" class=button>New connection</a>
+    <a href="bookgas" class=button>Book Gas</a>
+    <a href="pay" class=button>Pay</a>
+    <a href="delivery" class=button>Delivery</a>
+    <a href="bill_history" class=button>History</a>
+    <a href="session_end" class=button>Log out</a>
+  </center>
+  {% block NewConnection %}{% endblock NewConnection %}
+  {% block BookGas %}{% endblock BookGas %}
+  {% block done %}{% endblock done %}
+  {% block pay %}{% endblock pay %}
+  {% block delivery %}{% endblock delivery %}
+  {% block history %}{% endblock history %}
+
+</div>
+{% endblock %}
+
+
+
+
